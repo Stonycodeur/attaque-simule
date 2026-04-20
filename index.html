@@ -212,9 +212,9 @@
                 i++;
             } else {
                 clearInterval(interval);
-                setTimeout(launchRedAlert, 800);
+                setTimeout(launchRedAlert, 1500);
             }
-        }, 800);
+        }, 1500);
     }
 
     function launchRedAlert() {
@@ -238,10 +238,10 @@
                 d.textContent = m;
                 dangerLines.appendChild(d);
                 playAlertSound(150, "sawtooth", 0.4);
-            }, idx * 900);
+            }, idx * 2500);
         });
 
-        setTimeout(startFinalCountdown, 6500);
+        setTimeout(startFinalCountdown, (messages.length * 2500) + 1000);
     }
 
     function startFinalCountdown() {
